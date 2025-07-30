@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-     images: {
+  // Configure allowed image domains
+  images: {
     domains: ['randomuser.me'], 
   },
+
+  // Enable experimental features
   experimental: {
-    turbo: false, 
-    serverActions:{
-      bodySizeLimit:"5mb",
+    turbo: false, // Disable TurboPack (use Webpack instead)
+    serverActions: {
+      bodySizeLimit: "5mb", // Set max request body size for server actions
     },
   },
 };
